@@ -21,8 +21,8 @@ st.markdown(intro2)
 
 @st.cache
 def get_data():
-
-    return pd.read_csv(os.path.join("Data", "Bank-full.csv"), sep=";")
+    # ignore_hash=True
+    return pd.read_csv(os.path.join("Data", "bank-full.csv"), sep=";")
 
 
 st.markdown("## Exploratory data analyis")
