@@ -62,7 +62,8 @@ Looking at the distribution of our output variable we can derive the following:\
 ### Corelation of each attribute among each other 
 '''
 try:
-    image = Image.open('https://github.com/JoyMehta98/Bank_Merket_Analysis/blob/master/corelation.png')
+    loc = os.path.join("Media", "corelation.png")
+    image = Image.open(loc)
     st.image(image, caption='Corelation Image', use_column_width=True)
 except:
     pass
@@ -228,4 +229,58 @@ def balance_dis():
 
 st.plotly_chart(balance_dis())
 
+# HOUSING ANALYSIS ##########################
+'''
+### Understanding trend between housing ownership and term deposit:
+'''
+try:
+    loc = os.path.join("Media", "housingVSy.png")
+    image = Image.open(loc)
+    st.image(image, caption='Housing relationship', use_column_width=True)
+except:
+    pass
 
+'''
+#### Inference
+* There is not a strong trend or relation between housing and temp deposit.
+'''
+
+# Loan Analysis #############
+'''
+### Relationship between loan and temp deposit:
+'''
+try:
+    loc = os.path.join("Media","loanVSy.png")
+    image = Image.open(loc)
+    st.image(image, caption='Loan relationship', use_column_width=True)
+except:
+    pass
+
+'''
+#### Inference
+* Again there is not a strong corelation execpt for that, people with loans are less likely to opt in for term deposit than without loan.
+'''
+
+# FINAL CONCLUSION #############
+
+'''
+### Final Conslusion
+'''
+
+try:
+    loc = os.path.join("Media", "finalConclusion.png")
+    image = Image.open(loc)
+    st.image(image, caption='Final Conslusion', use_column_width=True)
+except:
+    pass
+
+'''
+* **We can see from the above image that, the call duration has a very significant impact on our outcome.**
+* **This can be explained because those who had a longer conversation on call, are more intrested in the term deposit and are hence more likely to opt in.**
+* **Apart from that, contact, (i.e. 'cellular' or 'tele') has highest impact on decision variable after duration.**
+* **Hence we can ask the bank to train employees such that they have more retention of the customers.**
+* **Bank should also focus more towards people having fixed housing as they are more likely to opt in.**
+* **Education (as opposed to our logical thinking) should not be considered as a decisive factor.**
+* **Simillarly, loan also should not be considered as decisive factor.**
+* **In terms of marketing trends, bank should call more on friday and saturday to increase their chances.**
+'''
