@@ -67,6 +67,17 @@ try:
     st.image(image, caption='Corelation Image', use_column_width=True)
 except:
     pass
+
+'''
+### Distribution of each arrtivute among each other
+'''
+try:
+    loc = os.path.join("Media", "pair_plt.png")
+    image = Image.open(loc)
+    st.image(image, caption="Pair Plot", use_column_width=True)
+except:
+    pass
+
 '''
 ### The following inference can be deduced:
 * Most of the columns are distinct and not corelates
@@ -273,6 +284,8 @@ try:
     st.image(image, caption='Final Conslusion', use_column_width=True)
 except:
     pass
+
+
 
 '''
 * **We can see from the above image that, the call duration has a very significant impact on our outcome.**
